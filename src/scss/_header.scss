@@ -1,0 +1,43 @@
+.header {
+    background-color: #e8e8e8;
+    background-image: url('../img/header-background.svg');
+    padding: 4em 0;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    &__image {
+        width: 80%;
+        box-sizing: border-box;
+
+        img {
+            border-radius: 50%;
+            border: 18px solid $white;
+            box-shadow: 0 0 20px $grey;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        padding-left: 6em;
+    }
+
+    &__heading {
+        margin-top: -20px;
+        margin-bottom: 0;
+    }
+
+    &__sub-heading {
+        font-size: 1.25em;
+        font-weight: normal;
+        color: $grey;
+        margin-bottom: 3px;
+        margin-left: 30px;
+    }
+}
