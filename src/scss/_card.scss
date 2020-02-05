@@ -26,11 +26,20 @@
             background-color: $orange;
         }
 
+        &--grey {
+            background-color: $greyDark;
+        }
+
+        &--green {
+            background-color: $green;
+        }
+
         img {
             width: 33.33%;
             height: 150px;
             margin: 10px auto;
             transition: filter 250ms, transform 350ms;
+            fill: $white;
         }
     }
 
