@@ -1,7 +1,6 @@
 .header {
-    background-color: #e8e8e8;
-    background-image: url('img/header-background.svg');
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, #dedede 0%, transparent 120%);
     padding: 4em 0;
     margin-bottom: 6em;
 
