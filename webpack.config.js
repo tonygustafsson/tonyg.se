@@ -46,12 +46,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/templates/index.hbs',
             minify: {
-                collapseWhitespace: true,
-                removeComments: true,
-                removeRedundantAttributes: true,
-                removeScriptTypeAttributes: true,
-                removeStyleLinkTypeAttributes: true,
-                useShortDoctype: true
+                collapseWhitespace: true
             }
         }),
         new SVGSpritemapPlugin('./src/img/icons/*.svg', {
