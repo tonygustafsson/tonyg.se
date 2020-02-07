@@ -17,9 +17,7 @@ module.exports = {
                     { loader: 'style-loader' },
                     {
                         loader: 'css-loader',
-                        options: {
-                            url: false
-                        }
+                        options: {}
                     },
                     {
                         loader: 'postcss-loader',
