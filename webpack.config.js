@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 const path = require('path');
 
-const mode = 'development';
+const mode = 'production';
 const watch = true;
 
 module.exports = {
@@ -44,7 +44,15 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/templates/index.hbs'
+            template: './src/templates/index.hbs',
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true,
+                removeRedundantAttributes: true,
+                removeScriptTypeAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                useShortDoctype: true
+            }
         }),
         new SVGSpritemapPlugin('./src/img/icons/*.svg', {
             output: {

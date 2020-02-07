@@ -1,4 +1,4 @@
 node_modules
 dist/*.html
 dist/*.js
-dist/*.svg
+dist/**/*.svg
