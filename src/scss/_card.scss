@@ -10,7 +10,12 @@
     margin-bottom: 2em;
     background: $white;
 
-    @media (min-width: $desktop) {
+    @media (min-width: $screenMd) {
+        width: calc(50% - 1em);
+        margin-right: 1em;
+    }
+
+    @media (min-width: $screenLg) {
         width: calc(25% - 2em);
         margin-right: 2em;
     }
