@@ -54,6 +54,10 @@
             background-color: $red;
         }
 
+        .dark-mode & {
+            filter: grayscale(0.7);
+        }
+
         img,
         svg {
             width: 110px;
@@ -78,6 +82,10 @@
 
         a {
             color: $black;
+
+            .dark-mode & {
+                color: $white;
+            }
         }
     }
 
@@ -93,5 +101,9 @@
                 margin-bottom: 0;
             }
         }
+    }
+
+    .dark-mode & {
+        background-color: $greyDarkest;
     }
 }

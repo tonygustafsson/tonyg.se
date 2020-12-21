@@ -1,8 +1,29 @@
 .header {
-    background-color: rgb(255, 255, 255);
+    background-color: $white;
     background: radial-gradient(circle, #dedede 0%, transparent 120%);
     padding: 2em 0;
     margin-bottom: 2em;
+
+    &__theme {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        &__toggler {
+            display: none;
+            fill: #ffc500;
+            cursor: pointer;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+
+    .dark-mode & {
+        background-color: $black;
+        background: radial-gradient(circle, #2f2f2f 0%, transparent 120%);
+    }
 
     @media (min-width: $screenLg) {
         padding: 4em 0;
@@ -36,6 +57,7 @@
         box-sizing: border-box;
         filter: grayscale(1);
         outline: 0;
+        user-select: none;
 
         &--transitionable {
             transition-property: filter, border-top-right-radius, border-bottom-left-radius, border-top-left-radius,
