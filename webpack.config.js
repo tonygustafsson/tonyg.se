@@ -17,46 +17,45 @@ module.exports = {
                     { loader: 'style-loader' },
                     {
                         loader: 'css-loader',
-                        options: {}
                     },
                     {
                         loader: 'postcss-loader',
                         options: {
-                            config: {
-                                path: 'postcss.config.js'
-                            }
-                        }
+                            postcssOptions: {
+                                path: 'postcss.config.js',
+                            },
+                        },
                     },
                     {
                         loader: 'sass-loader',
-                        options: { sourceMap: true }
-                    }
-                ]
+                        options: { sourceMap: true },
+                    },
+                ],
             },
             {
                 test: /\.hbs$/,
                 loader: 'handlebars-loader',
-                query: {
-                    partialDirs: [path.join(__dirname, 'src', 'templates', 'partials')]
-                }
-            }
-        ]
+                options: {
+                    partialDirs: [path.join(__dirname, 'src', 'templates', 'partials')],
+                },
+            },
+        ],
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/templates/index.hbs',
             minify: {
-                collapseWhitespace: true
-            }
+                collapseWhitespace: true,
+            },
         }),
         new SVGSpritemapPlugin('./src/img/icons/*.svg', {
             output: {
                 filename: './img/sprite.svg',
-                svgo: true
+                svgo: true,
             },
             sprite: {
-                prefix: 'icon-'
-            }
-        })
-    ]
+                prefix: 'icon-',
+            },
+        }),
+    ],
 };
