@@ -16,6 +16,11 @@
     }
 
     @media (min-width: $screenLg) {
+        width: calc(33.333% - 2em);
+        margin-right: 2em;
+    }
+
+    @media (min-width: $screenXl) {
         width: calc(25% - 2em);
         margin-right: 2em;
     }
