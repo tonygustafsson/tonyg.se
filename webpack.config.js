@@ -14,7 +14,9 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    { loader: 'style-loader' },
+                    {
+                        loader: 'style-loader',
+                    },
                     {
                         loader: 'css-loader',
                     },
@@ -44,8 +46,9 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/templates/index.hbs',
+            inject: 'head',
             minify: {
-                collapseWhitespace: true,
+                collapseWhitespace: mode === 'production',
             },
         }),
         new SVGSpritemapPlugin('./src/img/icons/*.svg', {
