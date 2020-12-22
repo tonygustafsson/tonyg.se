@@ -2,8 +2,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 const path = require('path');
 
-const mode = 'production';
-const watch = true;
+const mode = process.argv[3] && process.argv[3] === 'production' ? 'production' : 'development';
+const watch = mode !== 'production';
+
+console.log(`Building webpack in ${mode} mode`);
 
 module.exports = {
     mode: mode,
@@ -30,7 +32,7 @@ module.exports = {
                     },
                     {
                         loader: 'sass-loader',
-                        options: { sourceMap: true },
+                        options: { sourceMap: mode !== 'production' },
                     },
                 ],
             },
