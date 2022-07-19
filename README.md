@@ -2,6 +2,10 @@
 
 My personal page about myself, my work and my projects.
 
+## Dependencies
+
+-   NodeJS <= 17
+
 ## Run dev
 
 ```
