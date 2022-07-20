@@ -65,6 +65,13 @@
             margin: 28px auto;
             transition: filter 250ms, transform 350ms;
         }
+
+        &--rectangular {
+            img,svg {
+                width: 180px;
+                height: 110px;
+            }  
+        }
     }
 
     &:hover {
