@@ -55,7 +55,7 @@
         border: 18px solid $white;
         box-shadow: 0 0 20px $grey;
         box-sizing: border-box;
-        filter: grayscale(1);
+        filter: grayscale(1) contrast(1.4);
         outline: 0;
         user-select: none;
 
@@ -69,11 +69,11 @@
 
         &:hover {
             border-radius: 0;
-            filter: grayscale(0);
+            filter: grayscale(0.1) contrast(1.4);
 
             @media (prefers-reduced-motion) {
                 border-radius: 50%;
-                filter: grayscale(1);
+                filter: grayscale(1) contrast(0);
             }
         }
     }
